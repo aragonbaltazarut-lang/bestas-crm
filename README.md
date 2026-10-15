@@ -181,11 +181,56 @@ Las tablas:
 - `incidencias`: lo que no se pudo cargar, con la celda donde está.
 - `historial` (vista): fechas, primera y última, entradas compradas y gastado de cada persona.
 
-## Lo que falta
+## Hacia dónde va
 
-- **Importadores para las otras ticketeras** con las que trabaja la productora (Flashpass, PlanOut, Tickit). Con el esquema como está, cada una es un importador nuevo: lo demás sirve igual.
-- **Quién entró de verdad.** El export de Bombo no trae el control de acceso, así que el historial cuenta a quien tenía la entrada, no a quien la escaneó en la puerta. Con ese dato se sabría quién compró y no fue.
-- **Bajas desde el propio mail.** Hoy se registran a mano o por la API. Lo ideal es un link en cada envío, firmado para cada destinatario (así nadie puede dar de baja a otro), que registre la baja sin pedir el token.
+Hoy el CRM cubre al público. Una productora con sello tiene más contactos que eso —RRPP, artistas, la gente del sello, marcas y venues—, y cada uno pasa por sus propias etapas.
+
+### Público
+
+- [ ] **Etapas de contacto**: nuevo, primera compra, volvió, habitual, inactivo. Se calculan solas a partir de `historial`.
+- [ ] **Grupos de amigos**: con quién compra para quién, encontrar al que trae al grupo. Le escribís a uno y vienen cuatro.
+- [ ] **Afinidad por artista**: avisarle a quien ya vio a un DJ cuando vuelve.
+- [ ] **Preventa para los habituales**, con un link propio para medir cuántos compran.
+- [ ] **Curva de ventas** por fecha y por tanda, para decidir cuándo abrir la siguiente (hace falta la fecha de compra).
+- [ ] **Encuesta después de cada fecha**, guardada en la ficha de cada persona.
+
+### RRPP
+
+- [ ] **Lista de invitados digital con control en la puerta**: reemplaza las planillas de RRPP y deja registrado quién entró de verdad.
+- [ ] **Liquidación de comisiones** por fecha y por tanda.
+- [ ] **Calidad del público de cada RRPP**: cuánta gente nueva trae y cuánta vuelve.
+
+### Artistas
+
+- [ ] **Ficha de cada DJ**, residente o invitado: contacto o agencia, fee, rider, fechas en las que tocó y cuánta gente movió.
+- [ ] **Etapas de booking**: contactado, oferta, confirmado, pagado.
+
+### Sello
+
+- [ ] **Lista de promo** de cada lanzamiento: a quién se mandó, quién respondió y quién lo pasó.
+- [ ] **Demos recibidos**, con etapas: recibido, escuchado, preseleccionado, firmado.
+- [ ] **Regalías y repartos** por lanzamiento y por artista.
+
+### Marcas y venues
+
+- [ ] **Ficha de cada marca y cada venue**: fechas, contacto, condiciones, cuándo renovar.
+- [ ] **Reporte para sponsors** con datos del público sin identificar a nadie.
+
+### Agentes automáticos
+
+- [ ] **Carga automática** de las ventas de cada fecha apenas cierra.
+- [ ] **Reporte del día siguiente** al equipo: ventas, gente nueva, quién volvió, ranking de RRPP.
+- [ ] **Seguimiento por etapa**: arma el mail cuando alguien cambia de etapa y lo deja para que una persona lo apruebe.
+- [ ] **Promo del sello**: cuando sale un disco, propone a qué DJs mandárselo.
+- [ ] **Preguntas en lenguaje natural** sobre la base, solo de lectura.
+
+Los agentes trabajan sobre datos personales: anonimizados o con un modelo que corra local, con el mismo criterio con el que el género no se estima con un servicio de afuera.
+
+### Fuentes y conexiones
+
+- [ ] **Importadores para las otras ticketeras** (Flashpass, PlanOut, Tickit). Con el esquema como está, cada una es un importador nuevo.
+- [ ] **Bajas desde el propio mail**, con un link firmado para cada destinatario.
+- [ ] **Conexión con el sitio**: que el formulario de contacto y la suscripción al newsletter entren al CRM, y que los dos compartan la lista de eventos.
 
 ## Licencia
 
