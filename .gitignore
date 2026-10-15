@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.db
+
+# Las bases reales tienen nombres, mails y DNI de gente: nunca van al repo.
+# Solo se sube datos/ejemplo, que es inventado.
+datos/*
+!datos/ejemplo/
+*.csv
+!crm/nombres.csv
